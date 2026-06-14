@@ -12,20 +12,14 @@ import ProductCardContext from './ProductContext';
 
 type Props = {
   product: Product;
-  image?: ReactNode;
-  info?: ReactNode;
-  action?: ReactNode;
+  children: ReactNode;
 };
 
-function ProductCard({ product, image, info, action }: Props) {
+function ProductCard({ product, children }: Props) {
   return (
     <ProductCardContext.Provider value={{ product }}>
       <div className="product-card">
-        {image}
-        <div className="product-card-bottom">
-          {info}
-          {action}
-        </div>
+        {children}
       </div>
     </ProductCardContext.Provider>
   );

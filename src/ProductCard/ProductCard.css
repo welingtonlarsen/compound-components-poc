@@ -12,17 +12,11 @@
   flex-direction: column;
 }
 
-.product-card .product-card-bottom {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-}
-
 .product-card .product-info {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding: 1rem 1rem 0;
 }
 
 .product-card .product-category {
@@ -54,7 +48,8 @@
 }
 
 .product-card .product-button {
-  width: 100%;
+  margin: 1rem;
+  width: calc(100% - 2rem);
   border: none;
   background: #80af70;
   color: white;

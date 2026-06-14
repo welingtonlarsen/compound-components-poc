@@ -22,21 +22,22 @@ const product2: Product = {
 function App() {
   const { addToCart } = useProduct();
 
-  return [product1, product2].map((product) => (
-    <ProductCard
-      product={product}
-      image={<ProductCard.Image />}
-      info={
-        <ProductCard.Info>
-          <ProductCard.Category />
-          <ProductCard.Title />
-          <ProductCard.Rating />
-          <ProductCard.Price />
-        </ProductCard.Info>
-      }
-      action={<ProductCard.Button onClick={addToCart}>Add to cart</ProductCard.Button>}
-    />
-  ));
+  return (
+    <div style={{ display: 'flex', flexDirection: 'row', gap: '16px', padding: '16px' }}>
+      {[product1, product2].map((product) => (
+        <ProductCard key={product.id} product={product}>
+          <ProductCard.Image />
+          <ProductCard.Info>
+            <ProductCard.Category />
+            <ProductCard.Title />
+            <ProductCard.Rating />
+            <ProductCard.Price />
+          </ProductCard.Info>
+          <ProductCard.Button onClick={addToCart}>Add to cart</ProductCard.Button>
+        </ProductCard>
+      ))}
+    </div>
+  );
 }
 
 export default App;
