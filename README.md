@@ -1,6 +1,6 @@
 # Compound Components POC
 
-This project is a small React + TypeScript proof of concept that demonstrates the
+This project is a small React proof of concept that demonstrates the
 compound components pattern through a `ProductCard` UI.
 
 Instead of exposing one large component with many props, the card exposes a family
